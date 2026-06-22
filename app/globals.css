@@ -1,0 +1,217 @@
+:root {
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --border: #e3e6ea;
+  --text: #1f2430;
+  --muted: #8a93a2;
+  --primary: #4f6df5;
+  --primary-dark: #3b56d6;
+  --danger: #e5484d;
+  --overdue: #e5484d;
+  --today: #d98300;
+  --future: #2d8a4e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans",
+    "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.sub {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.add-form {
+  display: flex;
+  gap: 8px;
+  margin: 28px 0 12px;
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  background: var(--card);
+  color: var(--text);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 109, 245, 0.15);
+}
+
+.title-input {
+  flex: 1;
+}
+
+.date-input {
+  width: 160px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn:hover {
+  background: #f0f2f5;
+}
+
+.btn.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn.danger {
+  color: var(--danger);
+  border-color: transparent;
+}
+
+.btn.danger:hover {
+  background: #fdecec;
+}
+
+.btn.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.status {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 0;
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+}
+
+.item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.view-row,
+.edit-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-row {
+  flex-wrap: wrap;
+}
+
+.edit-row .input:first-of-type {
+  flex: 1;
+}
+
+.check {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.todo-title {
+  flex: 1;
+  word-break: break-word;
+}
+
+.item.done .todo-title {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.due {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  background: #eef0f3;
+  color: var(--muted);
+}
+
+.due-overdue {
+  background: #fdecec;
+  color: var(--overdue);
+}
+
+.due-today {
+  background: #fff3e0;
+  color: var(--today);
+}
+
+.due-future {
+  background: #e8f6ee;
+  color: var(--future);
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
