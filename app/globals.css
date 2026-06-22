@@ -1,13 +1,13 @@
 :root {
-  --bg: #f5f6f8;
+  --bg: #fff5f5;
   --card: #ffffff;
-  --border: #e3e6ea;
-  --text: #1f2430;
-  --muted: #8a93a2;
-  --primary: #4f6df5;
-  --primary-dark: #3b56d6;
-  --danger: #e5484d;
-  --overdue: #e5484d;
+  --border: #f3d2d2;
+  --text: #2a1414;
+  --muted: #b08a8a;
+  --primary: #e11d2a;
+  --primary-dark: #b3121d;
+  --danger: #9b0d16;
+  --overdue: #e11d2a;
   --today: #d98300;
   --future: #2d8a4e;
 }
@@ -65,7 +65,7 @@ body {
 .input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(79, 109, 245, 0.15);
+  box-shadow: 0 0 0 3px rgba(225, 29, 42, 0.15);
 }
 
 .title-input {
